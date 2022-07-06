@@ -11,6 +11,24 @@ import javax.persistence.Table;
 @Table(name="experience")
 public class ExeperienceModel {
 	
+	
+	@Id
+	private long expierenceModelId;
+	@Column(name="job_title")
+	private String jobTitle;
+	@Column(name="organization_Name")
+	private String organizationName;
+	@Column(name="job_Description")
+	private String jobDescription;
+	@Column(name="start_Date")
+	private Date startDate;
+	@Column(name="end_Date")
+	private Date endDate;
+	@Column(name="currently_Working")
+	private boolean currentlyWorking;
+	@Column(name="fk_employee_id")
+	private long fk_employee_id;
+
 	private int experienceId;
 	
 	public int getExperienceId() {
@@ -61,19 +79,18 @@ public class ExeperienceModel {
 	public void setFk_employee_id(long fk_employee_id) {
 		this.fk_employee_id = fk_employee_id;
 	}
-	@Id
-	private String jobTitle;
-	@Column(name="organization_Name")
-	private String organizationName;
-	@Column(name="job_Description")
-	private String jobDescription;
-	@Column(name="start_Date")
-	private Date startDate;
-	@Column(name="end_Date")
-	private Date endDate;
-	@Column(name="currently_Working")
-	private boolean currentlyWorking;
-	@Column(name="fk_employee_id")
-	private long fk_employee_id;
+	public long getExpierenceModelId() {
+		return expierenceModelId;
+	}
+	public void setExpierenceModelId(long expierenceModelId) {
+		this.expierenceModelId = expierenceModelId;
+	}
+	public boolean isCurrentlyWorking() {
+		return currentlyWorking;
+	}
+	public void setCurrentlyWorking(boolean currentlyWorking) {
+		this.currentlyWorking = currentlyWorking;
+	}
+	
 
 }
